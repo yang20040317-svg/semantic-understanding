@@ -1,0 +1,18 @@
+{
+  "version": "1.1.0",
+  "skill": "semantic-understanding",
+  "promote_threshold": 2,
+  "max_profile_rules": 20,
+  "inject_top_k": 5,
+  "min_score": 0.22,
+  "tail_ratio": 0.6,
+  "short_prompt_len": 6,
+  "fallback_case_id": "c-20260925-005",
+  "auto_viz": true,
+  "storage": {
+    "cases": "cases/cases.jsonl",
+    "pending": "pending/candidates.jsonl",
+    "profile": "profile/expression-profile.md"
+  },
+  "note": "promote_threshold=2 表示同一条 rule 需被 2 个独立案例支撑才升级为常驻档案；单条案例仍可被 recall 检索到（长尾通道）。auto_viz=true 表示任何写操作成功后自动重绘 viz/index.html，无需手动跑 viz 命令。min_score=0.22 是判据重写（2026-09-25）后重新校准的值：实测真阳性命中落在 0.33~0.95，噪音上限 0.05，中间留出安全间隔。tail_ratio=0.6 表示其余条目须达到 top1 的 60% 才允许一起注入，滤掉跟在真命中后面的弱相关噪音。short_prompt_len=6 + fallback_case_id：当汉字段短于 6 字且无任何命中时，按结构特征兜到该案例 —— 极短指令靠字面判据永远判不出语义（『改改』得 0.00），只能靠长度兜底。"
+}

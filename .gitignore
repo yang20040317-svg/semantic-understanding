@@ -1,0 +1,15 @@
+# ── 运行产物 / 缓存 ────────────────────────────────
+__pycache__/
+*.pyc
+*.pyo
+.session-state/
+
+# ── 生成物（内容随本地数据变化，不入库）─────────────
+viz/index.html
+
+# ── 个人数据层 ────────────────────────────────────
+# 下面是本技能在本地生长出来的内容：你的原话、纠正记录、常驻规则档案。
+# 它们属于使用者本人，不进公开仓库。clone 后从 *.example.jsonl 起步。
+cases/cases.jsonl
+pending/candidates.jsonl
+profile/expression-profile.md

@@ -4,6 +4,11 @@
 
 提示词工程优化的是「AI 怎么说」。这个技能处理另一半问题 —— **AI 怎么听**。
 
+> **在线预览**：https://yang20040317-svg.github.io/semantic-understanding/
+>
+> 打开的就是仓库里的 [`docs/index.html`](docs/index.html) —— 用示例数据渲染的 demo 面板。
+> Pages 只是把这个文件当网页呈现，**不是第二份内容**，改仓库它就跟着变。
+
 ## 它解决什么
 
 你和 AI 反复改同一件事，往往不是它不懂技术，而是它把你的话解释错了：
@@ -124,7 +129,8 @@ semantic-understanding/
 ├── pending/candidates.jsonl      待确认候选（本地生长，不入库）
 ├── profile/expression-profile.md 常驻档案（本地生长，不入库）
 ├── .session-state/               hook 会话状态（自动生成）
-└── viz/index.html                可视化面板（自动生成）
+├── viz/index.html                可视化面板（自动生成，本地）
+└── docs/index.html               demo 面板（示例数据，Pages 用它对外预览）
 ```
 
 ## 自动注入（可选）
